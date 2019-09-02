@@ -81,8 +81,9 @@ public class Logica {
         System.out.print("Inserte lado 3: ");
         int lado3=ingreso.nextInt();
         figura[posicion]=new Triangulo(lado1,lado2,lado3);
-    }/**
-     * Solicitar datos del cuadrado o rectangulo
+    }
+    /**
+     * Metodo para solicitar datos del cuadrado o rectangulo
      * @param posicion del vector
      */
     private void llenarCuadrado(int posicion){
@@ -93,6 +94,11 @@ public class Logica {
         figura[posicion]=new Cuadrado(largo,ancho);  
               
     }
+    /**
+     * Metodo para llenar datos de la figura circulo o elipse
+     * @param posicion del vector
+     * @param tipo de figura
+     */
     private void llenarCirucloEclipse(int posicion, String tipo){
         System.out.print("Inserte Radio: ");
         int radio=ingreso.nextInt();
