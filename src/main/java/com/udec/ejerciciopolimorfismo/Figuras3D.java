@@ -6,10 +6,14 @@
 package com.udec.ejerciciopolimorfismo;
 
 /**
- *
- * @author Corin V
+ * Clase Padre de las figuras 3D
+ * @author Corin Viracacha
  */
 public abstract class Figuras3D {
+    /**
+     * Metodo para especializar, ademas de hallar el volumen
+     * @return volumen
+     */
     public abstract double hallarVolumen(); 
    
     

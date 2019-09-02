@@ -7,13 +7,19 @@ package com.udec.ejerciciopolimorfismo;
 
 /**
  *
- * @author Corin V
+ * @author Corin Viracacha
+ * Clase Cuadrado hija de Figuras 2D 
  */
 public class Cuadrado extends Figuras2D implements Figura{
     private String tipo;
     private int lado1;
     private int lado2;
 
+    /**
+     * Constructor de la clase 
+     * @param lado1, representa uno de los lados del cuadrado
+     * @param lado2, representa otro de los lados del cuadrado
+     */
     public Cuadrado(int lado1, int lado2) {       
         this.lado1 = lado1;
         this.lado2 = lado2;
@@ -23,41 +29,67 @@ public class Cuadrado extends Figuras2D implements Figura{
             this.tipo = "Rectangulo";
         }
     }
-
+    /**
+     * Este metodo retorna el tipo si es cuadrado o rectangulo
+     * @return tipo
+     */
     public String getTipo() {
         return tipo;
     }
-
+    /**
+     * Metodo que asigan el valor de tipo
+     * @param tipo segun si es cuadrado o rectangulo
+     */
     public void setTipo(String tipo) {
         this.tipo = tipo;
     }
-
+    /**
+     * Este metodo retorna el valor de uno de los lados
+     * @return el valor de uno de los lados
+     */
     public int getLado1() {
         return lado1;
     }
-
+    /**
+     * Este metodo asigna el valor para uno de los lados
+     * @param lado1 contiene el valor de uno de sus lados
+     */
     public void setLado1(int lado1) {
         this.lado1 = lado1;
     }
-
+    /**
+     * Este metodo retorna el valor de uno de los lados
+     * @return el valor de uno de los lados
+     */
     public int getLado2() {
         return lado2;
     }
-
+    /**
+     * Este metodo asigna el valor para uno de los lados
+     * @param lado2 contiene el valor de uno de sus lados
+     */
     public void setLado2(int lado2) {
         this.lado2 = lado2;
     }
-
+    /**
+     * Este metodo es abstracto de Figuras2D, se encarga de hallar el perimetro
+     * @return perimetro
+     */
     @Override
     public double hallarPerimetro() {
         return (2*lado1+2*lado2);
     }
-
+    /**
+     * Este metodo es abstracto de la interface Figura, se encarga de hallar el area
+     * @return area
+     */
     @Override
     public double hallarArea() {
          return lado1*lado2;
     }
-
+    /**
+     * Este metodo es abstracto de la interface Figuras, se encarga de imprimir los resultados hallados
+     */
     @Override
     public void imprimirResultados() {
         System.out.println("El area del "+tipo+" es: "+hallarArea());

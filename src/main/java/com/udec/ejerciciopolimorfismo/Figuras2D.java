@@ -6,9 +6,13 @@
 package com.udec.ejerciciopolimorfismo;
 
 /**
- *
- * @author Corin V
+ * Clase Padre que ese encarga de hallar el perimetro
+ * @author Corin Viracacha
  */
 public abstract class Figuras2D {
+    /**
+     * Metodo para especializar por las figuras, ademas de hallar perimetro
+     * @return perimetro
+     */
     public abstract double hallarPerimetro();     
 }

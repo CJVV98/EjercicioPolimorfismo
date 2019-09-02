@@ -7,12 +7,21 @@ package com.udec.ejerciciopolimorfismo;
 import java.util.Scanner;
 /**
  *
- * @author Corin V
+ * @author Corin Viracacha
+ * En esta clase se solicita la informacion y se hace el llamado a los calculos geometricos
  */
 public class Logica {
+    /**
+     * posicion, determina la posicion dentro del vector de Figura
+     * figura, almacena las figuras seleccionadas por el usuario
+     * ingreso, para determinar lo digitado por el usuario
+     */
     private int posicion;
     private Figura[] figura;
     private Scanner ingreso;
+    /**
+     * En este metodo se visualiza las figuras a seleccionar.
+     */
     public void solicitarDato(){
         figura=new Figura[10];
         short seleccion;
@@ -34,7 +43,11 @@ public class Logica {
         }while(Character.toLowerCase(ingreso.next().charAt(0))=='s');
         calculos();
     }
-
+    /**
+     * Metodo que valida el tipo de figura si es 2D o 3D
+     * @param seleccion segun lo escogido por el usuario
+     * @param posicion del vector figura
+     */
     private void validarSeleccion(short seleccion,int posicion) {
         if(seleccion<=4){
             llenarFiguras2D(seleccion,posicion);
@@ -43,7 +56,11 @@ public class Logica {
         }
     
     }
-
+    /**
+     * En este metodo se solicitan los datos al usuario con respecto a las Figuras 2D y se llena el vector figura
+     * @param seleccion segun lo escogido por el usuario
+     * @param posicion del vector
+     */
     private void llenarFiguras2D(short seleccion,int posicion) {   
         switch(seleccion){
                 case 1:{                
@@ -65,7 +82,11 @@ public class Logica {
             }   
     
     }
-
+    /**
+     * En este metodo se solicitan los datos al usuario con respecto a las figuras 3D y se llena el vector figura
+     * @param seleccion segun lo escogido por el usuario
+     * @param posicion del vector
+     */
     private void llenarFiguras3D(short seleccion, int posicion) {
         switch(seleccion){
                 case 5:{                
@@ -87,7 +108,9 @@ public class Logica {
             } 
     
     }
-
+    /**
+     * Metodo encargado de llamar a los metodos para los calculos geometricos
+     */
     private void calculos() {
         for (Figura figur : figura) {
             System.out.println();

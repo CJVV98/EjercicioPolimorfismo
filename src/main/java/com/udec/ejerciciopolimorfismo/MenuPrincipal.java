@@ -7,9 +7,14 @@ package com.udec.ejerciciopolimorfismo;
 
 /**
  *
- * @author Corin V
+ * @author Corin Viracacha
+ * Clase Principal
  */
 public class MenuPrincipal {
+    /**
+     * Metodo principal
+     * @param ads 
+     */
     public static void main(String ...ads){
         Logica logica=new Logica();
         logica.solicitarDato();
