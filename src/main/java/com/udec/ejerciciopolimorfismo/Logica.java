@@ -56,7 +56,7 @@ public class Logica {
                llenarCuadrado(posicion);
                break;
            case 3: 
-               llenarCirucloEclipse(posicion, "Circulo");
+               llenarCirucloEsfera(posicion, "Circulo");
                break;
            case 4:
                llenarPiramide(posicion);
@@ -65,7 +65,7 @@ public class Logica {
                llenarCubo(posicion);
                break;
            case 6:
-               llenarCirucloEclipse(posicion,"Elipse");
+               llenarCirucloEsfera(posicion,"Esfera");
                break;
        }   
     }
@@ -99,7 +99,7 @@ public class Logica {
      * @param posicion del vector
      * @param tipo de figura
      */
-    private void llenarCirucloEclipse(int posicion, String tipo){
+    private void llenarCirucloEsfera(int posicion, String tipo){
         System.out.print("Inserte Radio: ");
         int radio=ingreso.nextInt();
         if("Circulo".equals(tipo))

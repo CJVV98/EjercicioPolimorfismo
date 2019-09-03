@@ -71,7 +71,7 @@ public class Piramide extends Figuras3D implements Figura{
      */
     @Override
     public double hallarVolumen() {
-        return (areaBase*altura)/3;
+        return (double)(areaBase*altura)/3;
     }
     /**
      * Metodo especializado de la interface Figura que halla el area

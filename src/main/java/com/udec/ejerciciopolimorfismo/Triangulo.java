@@ -125,17 +125,9 @@ public final class Triangulo extends Figuras2D implements Figura{
         if(null != tipo)switch (tipo) {
             case "Equilatero":
                 return sqrt(3)*pow(lado1,2)/4;
-            case "Isosceles":
-                if(lado1==lado2)
-                    aux=lado3;
-                else if(lado2==lado3)
-                    aux=lado1;
-                else
-                    aux=lado2;
-                return sqrt(3)*pow(aux,2)/4;
             default:
-                semiPerimetro=(lado1+lado2+lado3)/2;
-                aux=semiPerimetro*(semiPerimetro-lado1)*(semiPerimetro-lado2)*(semiPerimetro-lado3);
+                semiPerimetro=(double)(lado1+lado2+lado3)/2;
+                aux=(double)semiPerimetro*(semiPerimetro-lado1)*(semiPerimetro-lado2)*(semiPerimetro-lado3);
                 return sqrt(aux);
         }
         return 0;

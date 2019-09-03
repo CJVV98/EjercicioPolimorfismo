@@ -6,7 +6,7 @@
 package com.udec.ejerciciopolimorfismo;
 
 /**
- * Clase Padre de las figuras 3D
+ * Clase Padre  figuras 3D
  * @author Corin Viracacha
  */
 public abstract class Figuras3D {
